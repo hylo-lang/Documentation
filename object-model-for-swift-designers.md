@@ -29,8 +29,10 @@ easily intuit on their own, but please feel free to ask questions about anything
 ## Pure Value Semantics
 
 Val's originating question was: *What does programming look like when there is only [mutable value
-semantics](https://www.jot.fm/issues/issue_2022_02/article2.pdf)?*, so omitted the
-three sources of reference semantics in Swift's (single-thread) safe subset:
+semantics](https://www.jot.fm/issues/issue_2022_02/article2.pdf)?*
+
+Therefore we started with Swift, omitting the three sources of reference semantics in Swift's
+(single-thread) safe subset:
 - classes
 - mutable global variables
 - closure captures with reference semantics
