@@ -9,7 +9,7 @@ think it would look if Swift:
 - Started with support for non-copyable types.
 - Had the benefit of insights gained during its development, especially the law of exclusivity and
   `_modify`/`_read` accessors.
-- Did not start start with support for (single-thread safe) reference semantics at its core.
+- Did not start with support for (single-thread safe) reference semantics at its core.
 
 This post is not an attempt to sell Val to anyone, and we certainly don't believe Swift can adopt
 Val's object model wholesale, immediately, or without modification.  That said, we think Swift might
@@ -194,7 +194,7 @@ One syntactic difference from Swift you'll notice is that in Val there are no ex
 the rule that mutated objects are marked with `&`, so you'll see it in uses of operators and
 mutating methods.
 
-Anoteher difference from Swift is that, although `inout` parameters are required to be valid at
+Another difference from Swift is that, although `inout` parameters are required to be valid at
 function entry and exit, a callee is entitled to do anything with the value of such parameters,
 including destroying them, as long as it puts a value back before returning.  That makes it
 convenient to temporarily move an argument into an object that encapsulates some computation.
@@ -209,7 +209,7 @@ type Processor {
 }
 
 fun process(_ ast: inout AST) -> Result {
-  // move `ast` into `p`, without copying it
+  // Move `ast` into `p`, without copying it
   var p = Processor(ast)
   
   // Execute the computation encapsulated by `Processor`
