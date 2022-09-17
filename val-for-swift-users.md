@@ -69,7 +69,7 @@ where Self: MutableCollection, Element: Comparable
 }
 ```
 
-*Note: `&` is simply a marker required by the languages when a value is mutated, just like it is a marker for arguments passed to `inout` parameters in Swift.*
+*Note: `&` is simply a marker required by the language when a value is mutated, just like it is a marker for arguments passed to `inout` parameters in Swift.*
 
 Notice that, unlike in Swift, `start_index` is a method rather than a property.
 The reason is that, in Val, functions and methods *return* values while a properties and subscripts *project* one.
